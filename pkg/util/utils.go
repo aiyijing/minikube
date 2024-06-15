@@ -163,3 +163,16 @@ func MaskProxyPasswordWithKey(v string) string {
 	}
 	return v
 }
+
+// GetBinaryExecutePath returns the absolute path of the current binary
+func GetBinaryExecutePath() (string, error) {
+	exe, err := os.Executable()
+	if err != nil {
+		return "", err
+	}
+	p, err := filepath.Abs(exe)
+	if err != nil {
+		return "", err
+	}
+	return p, nil
+}
