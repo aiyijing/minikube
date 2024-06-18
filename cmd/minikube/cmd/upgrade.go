@@ -58,7 +58,7 @@ var upgradeCmd = &cobra.Command{
 		}
 
 		if currentSemVer.GTE(latestSemVer) {
-			out.Styled(style.Verifying, "You're using the latest minikube.")
+			out.Styled(style.Verifying, "You're already using the latest version of minikube.")
 			return
 		}
 		out.Styled(style.Fileserver, "A new version of minikube is available: {{.latestVersion}}\n",
