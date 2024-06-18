@@ -284,6 +284,7 @@ func init() {
 				ipCmd,
 				logsCmd,
 				updateCheckCmd,
+				upgradeCmd,
 				versionCmd,
 				optionsCmd,
 			},

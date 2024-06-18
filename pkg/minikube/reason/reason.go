@@ -549,4 +549,8 @@ var (
 		  minikube start{{.profile}} --driver qemu --network user`),
 		Style: style.SeeNoEvil,
 	}
+	UpgradeMinikubeFailed = Kind{
+		ID:       "MK_UPGRADE",
+		ExitCode: ExProgramNotFound,
+	}
 )
