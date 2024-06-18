@@ -57,7 +57,7 @@ var upgradeCmd = &cobra.Command{
 			exit.Error(reason.InetVersionUnavailable, "Unable to parse latest version", err)
 		}
 
-		if currentSemVer.EQ(latestSemVer) || currentSemVer.GT(latestSemVer) {
+		if currentSemVer.GTE(latestSemVer) {
 			out.Styled(style.Verifying, "You're using the latest minikube.")
 			return
 		}
